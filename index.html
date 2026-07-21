@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Miller — Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="nav">
+        <div class="nav-inner container">
+            <a href="#" class="logo">MM</a>
+            <nav class="nav-links">
+                <a href="#about" data-i18n="nav_about">About</a>
+                <a href="#skills" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" data-i18n="nav_projects">Projects</a>
+                <a href="#experience" data-i18n="nav_experience">Experience</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-accent" data-i18n="nav_contact">Contact</a>
+                <button id="langToggle" class="btn btn-outline-sm" type="button">FA</button>
+                <button id="themeToggle" class="btn btn-outline-sm" type="button" aria-label="Toggle theme">☀</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero container">
+            <div class="hero-text">
+                <span class="badge" data-i18n="hero_badge">AVAILABLE FOR WORK</span>
+                <h1 data-i18n="hero_name">Max Miller</h1>
+                <p class="lede" data-i18n="hero_role">Backend Developer — Django &amp; Laravel. Building web apps since
+                    2025.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-outline" data-i18n="hero_cta_projects">View Projects ↓</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero_cta_hello">Say Hello ↗</a>
+                </div>
+                <div class="stats">
+                    <div class="stat"><strong>1+</strong><span data-i18n="stat_years">Years coding</span></div>
+                    <div class="stat"><strong>3+</strong><span data-i18n="stat_projects">Shipped projects</span></div>
+                    <div class="stat"><strong>2</strong><span data-i18n="stat_stacks">Core stacks</span></div>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="hero-frame">
+                    <img src="C:\Users\Rayan_Svc\Desktop\files\assets\hero.png" alt="Hero visual" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about container reveal">
+            <h2><span data-i18n="about_title1">About</span><br><span class="accent" data-i18n="about_title2">Me.</span>
+            </h2>
+            <div class="about-grid">
+                <div class="panel panel-outline" data-i18n="about_p1">
+                    I'm a backend developer focused on Django and Laravel. I started coding in 2025 and have
+                    been building production-style projects since — from e-commerce platforms to real-time
+                    WebSocket apps.
+                </div>
+                <div class="panel panel-solid" data-i18n="about_p2">
+                    My approach: clean, targeted code over clever code. I believe in understanding a system
+                    before extending it, and I don't ship what I can't explain.
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&lt;/&gt;</div>
+                    <h3 data-i18n="feature1_title">Development</h3>
+                    <p data-i18n="feature1_desc">Django, Laravel, REST APIs,Graphql,gRPC WebSockets, and the infra to run them
+                        (Docker, CI/CD).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">◆</div>
+                    <h3 data-i18n="feature2_title">Data &amp; ML basics</h3>
+                    <p data-i18n="feature2_desc">NumPy, pandas, scikit-learn — applying ML fundamentals to real backend
+                        problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills container reveal">
+            <h2 data-i18n="skills_title">Skills &amp; Tools.</h2>
+
+            <div class="skill-group">
+                <span class="skill-label" data-i18n="skills_backend">BACKEND</span>
+                <div class="pills">
+                    <span class="pill pill-fill">Django</span>
+                    <span class="pill">Laravel</span>
+                    <span class="pill pill-fill">Flask</span>
+                    <span class="pill">FastAPI</span>
+                    <span class="pill pill-fill">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label" data-i18n="skills_db">DATABASE</span>
+                <div class="pills">
+                    <span class="pill pill-fill">PostgreSQL</span>
+                    <span class="pill pill-fill">MySQL</span>
+                    <span class="pill">MongoDB</span>
+                    <span class="pill">SQLite</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label" data-i18n="skills_other">OTHER</span>
+                <div class="pills">
+                    <span class="pill pill-fill">Docker</span>
+                    <span class="pill pill-fill">Git</span>
+                    <span class="pill pill-fill">GitHub Actions</span>
+                    <span class="pill pill-filll">GitLab CI</span>
+                    <span class="pill pill-fill">GCP</span>
+                    <span class="pill pill-fill">Cloudfare</span>
+                    <span class="pill pill-fill">Redis</span>
+                    <span class="pill pill-fill">English-C1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects container reveal">
+            <h2 data-i18n="projects_title">Selected Projects.</h2>
+
+            <div class="project-card">
+                <div class="project-media"></div>
+                <div class="project-body">
+                    <div class="tags">
+                        <span class="tag tag-fill" data-i18n="proj1_tag1">DJANGO</span>
+                        <span class="tag" data-i18n="proj1_tag2">E-COMMERCE</span>
+                    </div>
+                    <h3>mini-digi</h3>
+                    <p data-i18n="proj1_desc">Django e-commerce platform with dark/light theming, EN/FR/RU i18n,
+                        AJAX dashboard search, and a custom global rate-limiting middleware.</p>
+                    <a href="https://github.com/cmd-3324/mini-digi" class="btn btn-outline-sm" target="_blank"
+                        rel="noopener">
+                        <span data-i18n="proj_view">View Project</span> ↗
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media"></div>
+                <div class="project-body">
+                    <div class="tags">
+                        <span class="tag tag-fill" data-i18n="proj2_tag1">PROJECT</span>
+                    </div>
+                    <h3 data-i18n="proj2_title">Your Second Project</h3>
+                    <p data-i18n="proj2_desc">Swap this card for your next real project. Same structure, new content.
+                    </p>
+                    <a href="#" class="btn btn-outline-sm"><span data-i18n="proj_view">View Project</span> ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="experience container reveal">
+            <h2 data-i18n="exp_title">Experience.</h2>
+
+            <div class="exp-card">
+                <div class="exp-date">2025 — <span data-i18n="exp_present">Present</span>
+                    <span class="badge badge-sm" data-i18n="exp_current">CURRENT</span>
+                </div>
+                <div class="exp-body">
+                    <h3 data-i18n="exp1_title">Freelance Backend Developer</h3>
+                    <p class="exp-sub" data-i18n="exp1_sub">Self-employed</p>
+                    <p data-i18n="exp1_desc">Building Django and Laravel applications for clients — from
+                        data models to deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact container reveal">
+            <div class="contact-left">
+                <h2><span data-i18n="contact_title1">Let's Build</span><br><span class="accent"
+                        data-i18n="contact_title2">Together.</span></h2>
+                <a href="assets/resume.pdf" class="btn btn-outline" download="MaxMiller_Resume.pdf" data-i18n="contact_resume">↓ Download Resume</a>
+
+                <div class="contact-info">
+                    <a href="mailto:you@example.com" class="contact-row">
+                        <span class="icon-box">✉</span> programmers378@gmail.com
+                    </a>
+                    <a href="#" class="contact-row">
+                        <span class="icon-box">🌐</span> miniwicket.ir
+                    </a>
+                    <a href="https://github.com/cmd-3324" class="contact-row" target="_blank" rel="noopener">
+                        <span class="icon-box"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg></span> <span data-i18n="contact_github">GitHub Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <label>
+                        <span data-i18n="form_name">NAME *</span>
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>
+                        <span data-i18n="form_email">EMAIL *</span>
+                        <input type="email" name="email" required>
+                    </label>
+                </div>
+                <label>
+                    <span data-i18n="form_type">PROJECT TYPE</span>
+                    <select name="project_type">
+                        <option data-i18n="form_type_web">Web Application</option>
+                        <option data-i18n="form_type_api">API / Backend</option>
+                        <option data-i18n="form_type_other">Other</option>
+                    </select>
+                </label>
+                <label>
+                    <span data-i18n="form_message">MESSAGE *</span>
+                    <textarea name="message" rows="4" required data-i18n-ph="form_message_ph"
+                        placeholder="Tell me about your project..."></textarea>
+                </label>
+                <button type="submit" class="btn btn-send" data-i18n="form_send">Send Message ➤</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="logo">MM</span>
+            <div class="footer-icons">
+                <a href="https://miniwicket.ir">🌐</a>
+                <a href="https://github.com/cmd-3324" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                <a href="mailto:programmers378@gmail.com">✉</a>
+            </div>
+            <a href="#" class="btn btn-outline-sm" id="backToTop" data-i18n="back_to_top">↑ Back to top</a>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
