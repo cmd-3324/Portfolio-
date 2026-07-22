@@ -23,7 +23,11 @@ A single-page developer portfolio. Dark theme, lime accent, EN/FA language toggl
 │   └── main.js      # scroll progress, theme/lang toggles, reveal, form submit
 └── assets/
     ├── hero.png
-    └── resume.pdf
+    ├── resume.pdf
+    ├── favicon.svg
+    ├── favicon-32.png
+    ├── favicon-64.png
+    └── apple-touch-icon.png
 ```
 
 ## Running locally
