@@ -28,7 +28,7 @@ const I18N = {
   },
   fa: {
     nav_about: "درباره من", nav_skills: "مهارت‌ها", nav_projects: "پروژه‌ها", nav_experience: "سوابق", nav_contact: "تماس",
-    hero_badge: "آماده همکاری", hero_name: "نام شما",
+    hero_badge: "آماده همکاری", hero_name: "مکس میلرا",
     hero_role: "توسعه‌دهنده بک‌اند — جنگو و لاراول. از ۲۰۲۵ در حال ساخت وب‌اپلیکیشن.",
     hero_cta_projects: "مشاهده پروژه‌ها ↓", hero_cta_hello: "سلام بگو ↗",
     stat_years: "سال کدنویسی", stat_projects: "پروژه تحویل‌شده", stat_stacks: "استک اصلی",
