@@ -15,19 +15,25 @@ A single-page developer portfolio. Dark theme, lime accent, EN/FA language toggl
 
 ```
 .
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── i18n.js      # EN/FA dictionary + applyLang()
-│   └── main.js      # scroll progress, theme/lang toggles, reveal, form submit
-└── assets/
-    ├── hero.png
-    ├── resume.pdf
-    ├── favicon.svg
-    ├── favicon-32.png
-    ├── favicon-64.png
-    └── apple-touch-icon.png
+📁
+├── 📁 assets
+│   ├── 📁 projects
+│   │   ├── 🖼️ live-talk.png
+│   │   └── 🖼️ mini-digi.png
+│   ├── 🖼️ apple-touch-icon.png
+│   ├── 🖼️ favicon-32.png
+│   ├── 🖼️ favicon-64.png
+│   ├── 🖼️ hero.png
+│   ├── 📄 resume.docx
+│   └── 📕 resume.pdf
+├── 📄 Dockerfile
+├── 📝 flowchart.txt
+├── ✨ i18n.js
+├── 🌐 index.html
+├── ⚖️ LICENSE
+├── ✨ main.js
+├── 📘 README.md
+└── 🎨 style.css
 ```
 
 ## Running locally
