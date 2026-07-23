@@ -166,3 +166,42 @@ a { color: inherit; text-decoration: none; }
 /* ---------- RTL (Farsi) ---------- */
 html[dir="rtl"] body { direction: rtl; }
 html[dir="rtl"] .exp-card { grid-template-columns: 1fr; }
+
+
+/* ---------- Project media (thumbnail) ---------- */
+.project-media {
+  background: var(--bg-alt);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+/* Optional: zoom on hover */
+.project-card:hover .project-media img {
+  transform: scale(1.05);
+}
+
+.project-media::after {
+    content: 'Screenshot Coming Soon';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.project-media img {
+    position: relative;
+    z-index: 1;
+    /* sits above the placeholder text */
+}

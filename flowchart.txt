@@ -1,0 +1,19 @@
+📁
+├── 📁 assets
+│   ├── 📁 projects
+│   │   ├── 🖼️ live-talk.png
+│   │   └── 🖼️ mini-digi.png
+│   ├── 🖼️ apple-touch-icon.png
+│   ├── 🖼️ favicon-32.png
+│   ├── 🖼️ favicon-64.png
+│   ├── 🖼️ hero.png
+│   ├── 📄 resume.docx
+│   └── 📕 resume.pdf
+├── 📄 Dockerfile
+├── 📝 flowchart.txt
+├── ✨ i18n.js
+├── 🌐 index.html
+├── ⚖️ LICENSE
+├── ✨ main.js
+├── 📘 README.md
+└── 🎨 style.css
