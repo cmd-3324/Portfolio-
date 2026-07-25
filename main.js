@@ -74,10 +74,11 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   
   try {
     const templateParams = {
-      from_name: form.name.value.trim(),
-      from_email: form.email.value.trim(),
-      project_type: form.project_type.value,
-      message: form.message.value.trim()
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    title: form.project_type.value,
+    message: form.message.value.trim(),
+    time: new Date().toLocaleString()
     };
     
     const response = await emailjs.send(
@@ -87,19 +88,21 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     );
     
     if (response.status === 200) {
-      alert(messages.success);
-      form.reset();
+    document.getElementById("formStatus").textContent = messages.success;
+    document.getElementById("formStatus").className = "form-status success";
+    form.reset();
     } else {
-      throw new Error('EmailJS returned non-200 status');
+    throw new Error('EmailJS returned non-200 status');
     }
-  } catch (error) {
+    } catch (error) {
     console.error('EmailJS error details:', error);
-    alert(messages.error + '\n\nYou can email me directly: minwicket@gmail.com');
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-  }
-});
+    document.getElementById("formStatus").textContent = messages.error + " (" + "programmers378@gmail.com" + ")";
+    document.getElementById("formStatus").className = "form-status error";
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+    });
 
 // ---------- Back to top ----------
 document.getElementById("backToTop")?.addEventListener("click", (e) => {
