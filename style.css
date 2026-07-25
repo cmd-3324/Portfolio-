@@ -218,3 +218,21 @@ html[dir="rtl"] .exp-card { grid-template-columns: 1fr; }
 .form-status.error {
     color: #e07b7b;
 }
+.form-status {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-status.show {
+    opacity: 1;
+}
+
+.form-status.success {
+    color: #7bd88f;
+}
+
+.form-status.error {
+    color: #e07b7b;
+}

@@ -59,8 +59,8 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   const form = e.target;
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
+  const statusEl = document.getElementById("formStatus");
   
-  // Get i18n messages based on current language
   const lang = document.documentElement.lang || 'en';
   const messages = {
     sending: lang === 'fa' ? 'در حال ارسال...' : 'Sending...',
@@ -68,17 +68,17 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     error: lang === 'fa' ? '❌ خطا در ارسال. لطفاً مستقیماً ایمیل بزنید.' : '❌ Failed to send. Please email directly.'
   };
   
-  // Disable button and show loading
   submitBtn.disabled = true;
   submitBtn.textContent = messages.sending;
+  statusEl.textContent = '';
+  statusEl.className = 'form-status';
   
   try {
     const templateParams = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    title: form.project_type.value,
-    message: form.message.value.trim(),
-    time: new Date().toLocaleString()
+      from_name: form.name.value.trim(),
+      from_email: form.email.value.trim(),
+      project_type: form.project_type.value,
+      message: form.message.value.trim()
     };
     
     const response = await emailjs.send(
@@ -88,21 +88,22 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     );
     
     if (response.status === 200) {
-    document.getElementById("formStatus").textContent = messages.success;
-    document.getElementById("formStatus").className = "form-status success";
-    form.reset();
+      statusEl.textContent = messages.success;
+      statusEl.className = 'form-status success show';
+      form.reset();
+      setTimeout(() => { statusEl.className = 'form-status success'; }, 6000);
     } else {
-    throw new Error('EmailJS returned non-200 status');
+      throw new Error('EmailJS returned non-200 status');
     }
-    } catch (error) {
-    console.error('EmailJS error details:', error);
-    document.getElementById("formStatus").textContent = messages.error + " (" + "programmers378@gmail.com" + ")";
-    document.getElementById("formStatus").className = "form-status error";
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-    }
-    });
+  } catch (error) {
+    statusEl.textContent = messages.error;
+    statusEl.className = 'form-status error show';
+    setTimeout(() => { statusEl.className = 'form-status error'; }, 6000);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}); 
 
 // ---------- Back to top ----------
 document.getElementById("backToTop")?.addEventListener("click", (e) => {
