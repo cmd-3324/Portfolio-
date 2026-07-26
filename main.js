@@ -43,10 +43,9 @@ document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 // ---------- Contact form (EmailJS) ----------
 // ✅ REPLACE THESE THREE VALUES with your actual IDs
-const EMAILJS_PUBLIC_KEY = 'feib1ZCaJ8EKJHYbd';      // Your Public Key (from Account → API Keys)
-const EMAILJS_SERVICE_ID = 'service_cqol1nq';    // Your Service ID (from Email Services)
-const EMAILJS_TEMPLATE_ID = 'template_9ju1caw';    // Your Template ID (from Email Templates)
-
+const EMAILJS_PUBLIC_KEY = 'feib1ZCaJ8EKJHYbd';
+const EMAILJS_SERVICE_ID = 'service_cqol1nq';
+const EMAILJS_TEMPLATE_ID = 'template_9ju1caw';
 // Initialize EmailJS
 (function() {
   emailjs.init(EMAILJS_PUBLIC_KEY);
