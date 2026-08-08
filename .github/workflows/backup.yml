@@ -1,22 +1,22 @@
-name: Backup to Drive
+name: Backup to Drive #This is the name that we'll see in github/repo/actions Tab
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  backup:
-    runs-on: ubuntu-latest
-    env:
+  backup: # A workflow can do multiple jobs And this job is named Backup here.
+    runs-on: ubuntu-latest  #Creates a VM for workflow
+    env: #Sets up an envoritment in Created VM
       RCLONE_CONFIG_GDRIVE_TYPE: drive
       RCLONE_CONFIG_GDRIVE_SCOPE: drive.file
       RCLONE_CONFIG_GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
       RCLONE_CONFIG_GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
       RCLONE_CONFIG_GDRIVE_TOKEN: ${{ secrets.RCLONE_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
+    steps: # Next steps here: 
+      - uses: actions/checkout@v4 #  Clones Whole repo into VM - Using another pre-wrtten Shell Command in Vm
 
-      - name: Set timestamp
+      - name: Set timestamp # This is my custom Step name, id, shell command Unlike Above
         id: ts
         run: echo "stamp=$(TZ='Asia/Tehran' date +'%Y-%m-%d_%H-%M-%S')" >> "$GITHUB_OUTPUT"
 
