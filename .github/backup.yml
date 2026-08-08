@@ -1,0 +1,30 @@
+name: Backup to Drive
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      RCLONE_CONFIG_GDRIVE_TYPE: drive
+      RCLONE_CONFIG_GDRIVE_SCOPE: drive.file
+      RCLONE_CONFIG_GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+      RCLONE_CONFIG_GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+      RCLONE_CONFIG_GDRIVE_TOKEN: ${{ secrets.RCLONE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set timestamp
+        id: ts
+        run: echo "stamp=$(TZ='Asia/Tehran' date +'%Y-%m-%d_%H-%M-%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Zip repo
+        run: zip -r "backup_${{ steps.ts.outputs.stamp }}.zip" . -x ".git/*" -x ".github/*"
+
+      - name: Install rclone
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Upload to Drive
+        run: rclone copy "backup_${{ steps.ts.outputs.stamp }}.zip" "gdrive:Github Backup/"
