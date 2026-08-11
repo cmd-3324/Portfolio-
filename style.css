@@ -124,10 +124,10 @@ a { color: inherit; text-decoration: none; }
 .experience h2 { font-size: 40px; margin-bottom: 40px; }
 .exp-card { display: grid; grid-template-columns: 200px 1fr; gap: 24px; border: 2px solid var(--accent); padding: 24px; margin-bottom: 20px; }
 .exp-date { color: var(--text-dim); font-size: 13px; }
-.badge-sm { margin-left: 8px; padding: 2px 8px; font-size: 10px; }
-.exp-body h3 { font-size: 20px; }
+.badge-sm { margin-left: 8px; padding: 2px 8px; font-size: 10px; margin-bottom: 10px;}
+.exp-body h3 { font-size: 20px; margin-bottom: 15px;}
 .exp-sub { color: var(--accent); font-size: 13px; margin: 4px 0 10px; }
-.exp-body p { color: var(--text-dim); font-size: 14px; line-height: 1.5; margin: 0; }
+.exp-body p { color: var(--text-dim); font-size: 14px; line-height: 1.5; margin: 0; margin-bottom: 20px;}
 
 /* ---------- Contact ---------- */
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 80px 24px; }
@@ -236,3 +236,18 @@ html[dir="rtl"] .exp-card { grid-template-columns: 1fr; }
 .form-status.error {
     color: #e07b7b;
 }
+.badge-sm {
+    margin-inline-start: 8px;
+}
+html[dir="rtl"] .badge-sm {
+    margin-left: 0 !important;
+    margin-right: 8px !important;
+}
+/* 
+.exp-date {
+    margin-bottom: 12px;
+}
+
+.exp-body h3 {
+    margin-bottom: 6px;
+} */
