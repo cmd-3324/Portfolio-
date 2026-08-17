@@ -20,7 +20,7 @@ function updateTehranClock() {
     }).formatToParts(new Date()).map(x => [x.type, x.value])
   );
   tehranClock.textContent = isFa
-    ? `${p.year}/${p.month}/${p.day} ${p.hour}:${p.minute}:${p.second}`
+    ? `${p.day} / ${p.month} / ${p.year} ${p.hour}:${p.minute}:${p.second}`
     : `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}:${p.second}`;
 }
 updateTehranClock();

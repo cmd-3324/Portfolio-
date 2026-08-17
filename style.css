@@ -1,4 +1,17 @@
 /* ---------- Design tokens ---------- */
+@font-face {
+    font-family: 'IRANYekan';
+    src: url('assets/fonts/IRANYekanX-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANYekan';
+    src: url('assets/fonts/IRANYekanX-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
 :root {
   --bg: #141414;
   --bg-alt: #1b1b1b;
@@ -9,6 +22,7 @@
   --accent-dim: #6f7d22;
   --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+--font-fa: 'IRANYekan', var(--font-display);
   --container: 1160px;
   --gap: 24px;
 }
@@ -75,6 +89,8 @@ a { color: inherit; text-decoration: none; }
     color: var(--text-dim);
     letter-spacing: .03em;
     margin-bottom: 20px;
+    font-size:14px;
+    
 }
 .hero h1 { font-size: clamp(40px, 6vw, 72px); }
 .lede { color: var(--text-dim); font-size: 16px; max-width: 46ch; margin: 20px 0 28px; }
@@ -154,7 +170,27 @@ a { color: inherit; text-decoration: none; }
 .footer { border-top: 1px solid var(--border); padding: 32px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-icons { display: flex; gap: 20px; }
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .btn,
+html[dir="rtl"] .nav-links,
+html[dir="rtl"] .badge,
+html[dir="rtl"] .stat span,
+html[dir="rtl"] .tehran-clock,
+html[dir="rtl"] .contact-form label,
+html[dir="rtl"] .contact-form input,
+html[dir="rtl"] .contact-form select,
+html[dir="rtl"] .contact-form textarea {
+    font-family: var(--font-fa);
+    letter-spacing: normal;
+}
 
+html[dir="rtl"] .contact-form input::placeholder,
+html[dir="rtl"] .contact-form textarea::placeholder {
+    font-family: var(--font-fa);
+}
 /* ---------- Scroll reveal ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.visible { opacity: 1; transform: none; }
