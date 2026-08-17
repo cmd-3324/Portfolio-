@@ -8,7 +8,23 @@ function updateProgress() {
 }
 document.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
-
+// ---------- Tehran live clock ----------
+const tehranClock = document.getElementById("tehranClock");
+function updateTehranClock() {
+  const isFa = document.documentElement.lang === "fa";
+  const p = Object.fromEntries(
+    new Intl.DateTimeFormat(isFa ? "fa-IR-u-ca-persian" : "en-GB", {
+      timeZone: "Asia/Tehran", hour12: false,
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    }).formatToParts(new Date()).map(x => [x.type, x.value])
+  );
+  tehranClock.textContent = isFa
+    ? `${p.year}/${p.month}/${p.day} ${p.hour}:${p.minute}:${p.second}`
+    : `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}:${p.second}`;
+}
+updateTehranClock();
+setInterval(updateTehranClock, 1000);
 // ---------- Theme toggle (persisted) ----------
 const themeToggle = document.getElementById("themeToggle");
 function applyTheme(theme) {
@@ -25,9 +41,11 @@ themeToggle.addEventListener("click", () => {
 // ---------- Language toggle (persisted) ----------
 const langToggle = document.getElementById("langToggle");
 applyLang(localStorage.getItem("lang") || "en");
+updateTehranClock();  
 langToggle.addEventListener("click", () => {
   const current = document.documentElement.lang || "en";
   applyLang(current === "en" ? "fa" : "en");
+  pdateTehranClock();  
 });
 
 // ---------- Scroll reveal ----------
