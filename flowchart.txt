@@ -1,12 +1,16 @@
 📁
 ├── 📁 assets
+│   ├── 📁 fonts
+│   │   ├── 📄 iranyekanwebbold.e298fdc6.e298fdc6.woff
+│   │   ├── 📄 iranyekanwebmedium.2d4f96e5.2d4f96e5.woff
+│   │   └── 📄 iranyekanwebregular.b95439c1.b95439c1.woff
 │   ├── 📁 projects
-│   │   ├── 🖼️ live-talk.png
-│   │   └── 🖼️ mini-digi.png
-│   ├── 🖼️ apple-touch-icon.png
-│   ├── 🖼️ favicon-32.png
-│   ├── 🖼️ favicon-64.png
-│   ├── 🖼️ hero.png
+│   │   ├── 📄 live-talk.webp
+│   │   └── 📄 mini-digi.webp
+│   ├── 📄 apple-touch-icon.webp
+│   ├── 📄 favicon-32.webp
+│   ├── 📄 favicon-64.webp
+│   ├── 📄 hero.webp
 │   ├── 🎬 mini-digi.mp4
 │   └── 📕 resume.pdf
 ├── 📄 CNAME
