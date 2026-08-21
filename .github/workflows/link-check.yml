@@ -1,0 +1,31 @@
+name: Link Checker
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-Links:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+        - name: Install lychee
+          run: |
+           curl -sL https://github.com/lycheeverse/lychee/releases/latest/download/lychee-linux-x86_64 -o lychee
+           chmod +x lychee
+           sudo mv lychee /usr/local/bin/
+        - name: Check Links
+          continue-on-error: true
+          run: |
+            lychee \
+              --verbose \
+              --no-progress \
+              --exclude-path .git \
+              --exclude-path node_modules \
+              --exclude 'https?://(localhost|127.0.0.1|0.0.0.0)' \
+              --exclude 'https?://.*\.local' \
+              --max-redirects 5 \
+              --timeout 20 \
+              --accept 200,201,202,204,206,301,302,303,304,307,308 \
+            .
