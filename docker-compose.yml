@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./style.css:/usr/share/nginx/html/style.css:ro
+      - ./main.js:/usr/share/nginx/html/main.js:ro
+      - ./i18n.js:/usr/share/nginx/html/i18n.js:ro
+      - ./assets:/usr/share/nginx/html/assets:ro
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  portfolio-data:
