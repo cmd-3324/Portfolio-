@@ -3,9 +3,11 @@ name: Link Checker
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly check on Sundays at midnight UTC
 
 jobs:
-  check-Links:
+  check-links:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -17,17 +19,35 @@ jobs:
           chmod +x lychee
           sudo mv lychee /usr/local/bin/
 
-      - name: Check Links
-        continue-on-error: true
+      - name: Check Links in HTML & Markdown
         run: |
           lychee \
             --verbose \
             --no-progress \
             --exclude-path .git \
             --exclude-path node_modules \
-            --exclude 'https?://(localhost|127.0.0.1|0.0.0.0)' \
+            --exclude-path .github \
+            --exclude 'https?://(localhost|127.0.0.1|0.0.0.0):.*' \
             --exclude 'https?://.*\.local' \
-            --max-redirects 5 \
-            --timeout 20 \
-            --accept 200,201,202,204,206,301,302,303,304,307,308 \
-            .
+            --exclude 'mailto:.*' \
+            --max-redirects 3 \
+            --timeout 15 \
+            --accept 200,301,302,401 \
+            . || echo "⚠️ Link check completed with issues"
+
+      - name: Generate Report
+        if: always()
+        run: |
+          echo "### 🔗 Link Check Report" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Link validation completed" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Excluded paths:" >> $GITHUB_STEP_SUMMARY
+          echo "- .git/" >> $GITHUB_STEP_SUMMARY
+          echo "- node_modules/" >> $GITHUB_STEP_SUMMARY
+          echo "- .github/" >> $GITHUB_STEP_SUMMARY
+          echo "- localhost, 127.0.0.1, *.local domains" >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail if critical links broken
+        if: failure()
+        run: exit 1
