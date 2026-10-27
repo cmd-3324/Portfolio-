@@ -132,10 +132,10 @@ a { color: inherit; text-decoration: none; }
 .projects h2 { font-size: 40px; margin-bottom: 40px; }
 .project-card {
   display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--accent);
-  margin-bottom: 28px; min-height: 220px;
+  margin-bottom: 28px; min-height: 210px;
 }
 .project-media { background: var(--bg-alt); }
-.project-body { padding: 28px; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+.project-body { padding: 28px; display: flex; flex-direction: column; gap: 25px; }
 .tags { display: flex; gap: 8px; }
 .tag { border: 1px solid var(--border); font-size: 11px; padding: 4px 8px; text-transform: uppercase; }
 .tag-fill { background: var(--accent); color: #141414; border-color: var(--accent); }
@@ -285,4 +285,9 @@ html[dir="rtl"] .exp-card { grid-template-columns: 1fr; }
 html[dir="rtl"] .badge-sm {
     margin-left: 0 !important;
     margin-right: 8px !important;
+}
+
+
+.project-body .btn-outline-sm {
+    margin-top: 50px; /* Adjust value as needed: 8px, 10px, 16px */
 }

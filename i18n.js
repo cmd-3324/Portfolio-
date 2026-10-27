@@ -12,9 +12,23 @@ const I18N = {
     feature2_title: "Data & ML basics", feature2_desc: "NumPy, pandas, scikit-learn — applying ML fundamentals to real backend problems.",
     skills_title: "Skills & Tools.", skills_backend: "BACKEND", skills_db: "DATABASE", skills_other: "OTHER",
     projects_title: "Selected Projects.",
+    
+    // Project 1
     proj1_tag1: "DJANGO", proj1_tag2: "E-COMMERCE",
     proj1_desc: "Django e-commerce platform with dark/light theming, EN/FR/RU i18n, AJAX dashboard search, and a custom global rate-limiting middleware.",
-    proj2_tag2: "Live Tool", proj2_title: "Live-Talk", proj2_desc: "Django Live Speech To text & text to Speech Web-base platform.",
+    
+    // Project 2
+    proj2_tag1: "Django", // Added missing tag1 to match structure
+    proj2_tag2: "Live Tool", 
+    proj2_title: "Live-Talk", 
+    proj2_desc: "Django Live Speech To text & text to Speech Web-base platform.",
+
+    // Project 3 (Filled strictly from your previous input)
+    proj3_title: "DevCLI Tools",
+    proj3_tag1: "Typer-Rich",
+    proj3_tag2: "CLI Tools",
+    proj3_desc: "Small cross-platform developer CLI tools: inspect listening ports, check environment variables and monitor disk space. Built with Python, Typer and Rich.",
+
     proj_view: "View Project",
     exp_title: "Experience", exp_present: "Present", exp_current: "CURRENT",
     exp1_title: "Freelance Backend Developer", exp1_sub: "Self-employed",
@@ -42,9 +56,23 @@ const I18N = {
     feature2_title: "داده و مبانی ML", feature2_desc: "NumPy، pandas، scikit-learn — استفاده از مبانی ML در مسائل واقعی بک‌اند.",
     skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",
     projects_title: "پروژه‌های منتخب.",
+    
+    // Project 1
     proj1_tag1: "جنگو", proj1_tag2: "فروشگاهی",
     proj1_desc: "پلتفرم فروشگاهی جنگو با تم روشن/تاریک، چندزبانگی EN/FR/RU، جست‌وجوی داشبورد با AJAX و میان‌افزار محدودسازی نرخ درخواست.",
-    proj2_tag2: "جنگو", proj2_title: "Live-Talk", proj2_desc: "پلتفرم وب تبدیل گفتار به متن و متن به گفتار زنده با جنگو.",
+    
+    // Project 2
+    proj2_tag1: "جنگو", // Added missing tag1 to match structure
+    proj2_tag2: "ابزار زنده", 
+    proj2_title: "Live-Talk", 
+    proj2_desc: "پلتفرم وب تبدیل گفتار به متن و متن به گفتار زنده با جنگو.",
+
+    // Project 3 (Filled strictly from your previous input)
+    proj3_title: "DevCLI Tools",
+    proj3_tag1: "Typer-Rich",
+    proj3_tag2: "ابزار CLI",
+    proj3_desc: "مجموعه ابزارهای خط‌فرمان (CLI) برای توسعه‌دهندگان: بررسی پورت‌های فعال، متغیرهای محیطی و فضای دیسک. ساخته شده با پایتون، Typer و Rich.",
+
     proj_view: "مشاهده پروژه",
     exp_title: "سوابق", exp_present: "اکنون", exp_current: "فعلی",
     exp1_title: "توسعه‌دهنده بک‌اند فریلنس", exp1_sub: "مستقل",
