@@ -54,7 +54,7 @@ const I18N = {
     about_p2: "رویکرد من: کد هدفمند و تمیز، نه کد پیچیده. معتقدم باید سیستم را قبل از توسعه فهمید و چیزی را که نمی‌توانم توضیح دهم، تحویل نمی‌دهم.",
     feature1_title: "توسعه", feature1_desc: "جنگو، لاراول، REST API، وب‌سوکت و زیرساخت اجرای آن‌ها (داکر، CI/CD).",
     feature2_title: "داده و مبانی ML", feature2_desc: "NumPy، pandas، scikit-learn — استفاده از مبانی ML در مسائل واقعی بک‌اند.",
-    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",skills_comm: "ارابطه"
+    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",skills_comm: "ارابطه",
     projects_title: "پروژه‌های منتخب.",
     
     // Project 1
