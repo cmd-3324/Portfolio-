@@ -10,7 +10,7 @@ const I18N = {
     about_p2: "My approach: clean, targeted code over clever code. I believe in understanding a system before extending it, and I don't ship what I can't explain.",
     feature1_title: "Development", feature1_desc: "Django, Laravel, REST APIs, WebSockets, and the infra to run them (Docker, CI/CD).",
     feature2_title: "Data & ML basics", feature2_desc: "NumPy, pandas, scikit-learn — applying ML fundamentals to real backend problems.",
-    skills_title: "Skills & Tools.", skills_backend: "BACKEND", skills_db: "DATABASE", skills_other: "OTHER" ,skills_comm: "Comminucation && Trade-Off",
+    skills_title: "Skills & Tools.", skills_backend: "BACKEND", skills_db: "DATABASE", skills_other: "OTHER", skills_comm: "Communication & Trade-Offs",
     projects_title: "Selected Projects.",
     
     // Project 1
@@ -18,12 +18,12 @@ const I18N = {
     proj1_desc: "Django e-commerce platform with dark/light theming, EN/FR/RU i18n, AJAX dashboard search, and a custom global rate-limiting middleware.",
     
     // Project 2
-    proj2_tag1: "Django", // Added missing tag1 to match structure
+    proj2_tag1: "Django",
     proj2_tag2: "Live Tool", 
     proj2_title: "Live-Talk", 
     proj2_desc: "Django Live Speech To text & text to Speech Web-base platform.",
 
-    // Project 3 (Filled strictly from your previous input)
+    // Project 3
     proj3_title: "DevCLI Tools",
     proj3_tag1: "Typer-Rich",
     proj3_tag2: "CLI Tools",
@@ -50,28 +50,28 @@ const I18N = {
     hero_cta_projects: "مشاهده پروژه‌ها ↓", hero_cta_hello: "سلام بگو ↗",
     stat_years: "سال کدنویسی", stat_projects: "پروژه تحویل‌شده", stat_stacks: "استک اصلی",
     about_title1: "درباره", about_title2: "من.",
-    about_p1: "توسعه‌دهنده بک‌اند با تمرکز بر جنگو و لاراول هستم. از سال ۲۰۲۵ برنامه‌نویسی را شروع کردم و از آن زمان پروژه‌های واقعی ساخته‌ام — از پلتفرم‌های فروشگاهی تا اپلیکیشن‌های بلادرنگ با وب‌سوکت.",
-    about_p2: "رویکرد من: کد هدفمند و تمیز، نه کد پیچیده. معتقدم باید سیستم را قبل از توسعه فهمید و چیزی را که نمی‌توانم توضیح دهم، تحویل نمی‌دهم.",
+    about_p1: "توسعه‌دهنده بک‌اند با تمرکز بر جنگو و لاراول هستم. از سال ۲۰۲۵ برنامه‌نویسی را شروع کردم و از آن زمان در حال ساخت پروژه‌های مشابه تولیدی بوده‌ام — از پلتفرم‌های تجارت الکترونیکی تا اپلیکیشن‌های وب‌سوکت بلادرنگ.",
+    about_p2: "رویکرد من: کد هدفمند و تمیز، نه کد پیچیده. معتقدم باید سیستم را قبل از توسعه فهمید و چیزی را که نمی‌توانم توضیح بدهم، تحویل نمی‌دهم.",
     feature1_title: "توسعه", feature1_desc: "جنگو، لاراول، REST API، وب‌سوکت و زیرساخت اجرای آن‌ها (داکر، CI/CD).",
     feature2_title: "داده و مبانی ML", feature2_desc: "NumPy، pandas، scikit-learn — استفاده از مبانی ML در مسائل واقعی بک‌اند.",
-    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",skills_comm: "ارابطه",
+    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر", skills_comm: "ارتباطات و موازنه‌ها",
     projects_title: "پروژه‌های منتخب.",
     
     // Project 1
     proj1_tag1: "جنگو", proj1_tag2: "فروشگاهی",
-    proj1_desc: "پلتفرم فروشگاهی جنگو با تم روشن/تاریک، چندزبانگی EN/FR/RU، جست‌وجوی داشبورد با AJAX و میان‌افزار محدودسازی نرخ درخواست.",
+    proj1_desc: "پلتفرم فروشگاهی جنگو با تم روشن/تاریک، چندزبانگی EN/FR/RU، جست‌وجوی داشبورد با AJAX و میان‌افزار محدودکننده نرخ جهانی.",
     
     // Project 2
-    proj2_tag1: "جنگو", // Added missing tag1 to match structure
+    proj2_tag1: "جنگو",
     proj2_tag2: "ابزار زنده", 
     proj2_title: "Live-Talk", 
     proj2_desc: "پلتفرم وب تبدیل گفتار به متن و متن به گفتار زنده با جنگو.",
 
-    // Project 3 (Filled strictly from your previous input)
+    // Project 3
     proj3_title: "DevCLI Tools",
     proj3_tag1: "Typer-Rich",
     proj3_tag2: "ابزار CLI",
-    proj3_desc: "مجموعه ابزارهای خط‌فرمان (CLI) برای توسعه‌دهندگان: بررسی پورت‌های فعال، متغیرهای محیطی و فضای دیسک. ساخته شده با پایتون، Typer و Rich.",
+    proj3_desc: "مجموعه ابزارهای خط‌فرمان (CLI) برای توسعه‌دهندگان: بررسی پورت‌های فعال، متغیرهای محیطی و فضای دیسک. ساخته‌شده با Python، Typer و Rich.",
 
     proj_view: "مشاهده پروژه",
     exp_title: "سوابق", exp_present: "اکنون", exp_current: "فعلی",
@@ -79,7 +79,7 @@ const I18N = {
     exp1_desc: "ساخت اپلیکیشن‌های جنگو و لاراول برای کارفرمایان — از مدل داده تا دیپلوی.",
     exp2_badge: "روزهای قدیم",
     exp2_title: "مدرس زبان انگلیسی", exp2_sub: "مستقل",
-    exp2_desc: "تدریس به بیش از ۱۲۰ زبان‌آموز در تمام سطوح — با تخصص در آمادگی آزمون آیلتس و انگلیسی تجاری، با نرخ ماندگاری ۹۶٪ طی ۴ سال.",
+    exp2_desc: "تدریس به بیش از ۱۲۰ زبان‌آموز در تمام سطوح — با تخصص در آمادگی آزمون آیلتس و انگلیسی تجاری، با نرخ حفظ دانش‌آموزان ۹۶٪ در ۴ سال.",
     contact_title1: "بیایید بسازیم", contact_title2: "با هم.",
     contact_resume: "↓ دانلود رزومه", contact_github: "پروفایل گیت‌هاب",
     form_name: "نام *", form_email: "ایمیل *", form_type: "نوع پروژه",
