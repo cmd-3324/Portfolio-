@@ -8,6 +8,7 @@ function updateProgress() {
 }
 document.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
+
 // ---------- Tehran live clock ----------
 const tehranClock = document.getElementById("tehranClock");
 function updateTehranClock() {
@@ -25,6 +26,7 @@ function updateTehranClock() {
 }
 updateTehranClock();
 setInterval(updateTehranClock, 1000);
+
 // ---------- Theme toggle (persisted) ----------
 const themeToggle = document.getElementById("themeToggle");
 function applyTheme(theme) {
@@ -41,11 +43,11 @@ themeToggle.addEventListener("click", () => {
 // ---------- Language toggle (persisted) ----------
 const langToggle = document.getElementById("langToggle");
 applyLang(localStorage.getItem("lang") || "en");
-updateTehranClock();  
+updateTehranClock();
 langToggle.addEventListener("click", () => {
   const current = document.documentElement.lang || "en";
   applyLang(current === "en" ? "fa" : "en");
-  pdateTehranClock();  
+  updateTehranClock();
 });
 
 // ---------- Scroll reveal ----------
@@ -60,16 +62,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 // ---------- Contact form (EmailJS) ----------
-// ✅ REPLACE THESE THREE VALUES with your actual IDs
 const EMAILJS_PUBLIC_KEY = 'feib1ZCaJ8EKJHYbd';
 const EMAILJS_SERVICE_ID = 'service_cqol1nq';
 const EMAILJS_TEMPLATE_ID = 'template_9ju1caw';
-// Initialize EmailJS
 (function() {
   emailjs.init(EMAILJS_PUBLIC_KEY);
 })();
 
-// Handle form submission
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   
