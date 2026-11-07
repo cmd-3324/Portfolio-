@@ -10,7 +10,7 @@ const I18N = {
     about_p2: "My approach: clean, targeted code over clever code. I believe in understanding a system before extending it, and I don't ship what I can't explain.",
     feature1_title: "Development", feature1_desc: "Django, Laravel, REST APIs, WebSockets, and the infra to run them (Docker, CI/CD).",
     feature2_title: "Data & ML basics", feature2_desc: "NumPy, pandas, scikit-learn — applying ML fundamentals to real backend problems.",
-    skills_title: "Skills & Tools.", skills_backend: "BACKEND", skills_db: "DATABASE", skills_other: "OTHER",
+    skills_title: "Skills & Tools.", skills_backend: "BACKEND", skills_db: "DATABASE", skills_other: "OTHER" ,skills_comm: "Comminucation && Trade-Off",
     projects_title: "Selected Projects.",
     
     // Project 1
@@ -54,7 +54,7 @@ const I18N = {
     about_p2: "رویکرد من: کد هدفمند و تمیز، نه کد پیچیده. معتقدم باید سیستم را قبل از توسعه فهمید و چیزی را که نمی‌توانم توضیح دهم، تحویل نمی‌دهم.",
     feature1_title: "توسعه", feature1_desc: "جنگو، لاراول، REST API، وب‌سوکت و زیرساخت اجرای آن‌ها (داکر، CI/CD).",
     feature2_title: "داده و مبانی ML", feature2_desc: "NumPy، pandas، scikit-learn — استفاده از مبانی ML در مسائل واقعی بک‌اند.",
-    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",
+    skills_title: "مهارت‌ها و ابزارها.", skills_backend: "بک‌اند", skills_db: "پایگاه داده", skills_other: "سایر",skills_comm: "ارابطه"
     projects_title: "پروژه‌های منتخب.",
     
     // Project 1
